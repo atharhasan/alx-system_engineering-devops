@@ -1,4 +1,2 @@
 #!/bin/bash
-VAR=128
-SUM=$((VAR + TRUEKNOWLEDGE))
-echo "$SUM"
+echo "$((128 + TRUEKNOWLEDGE))"
