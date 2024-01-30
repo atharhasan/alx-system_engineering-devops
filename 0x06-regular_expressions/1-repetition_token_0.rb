@@ -1,2 +1,3 @@
 #!/usr/bin/env ruby
-(hbt{0,6}n)
+#puts ARGV[0].scan(/School/).join
+/(hbt{0,6}n)/
