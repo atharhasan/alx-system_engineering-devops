@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Adding the SSH public key below to your server.
-nano ~/.ssh/authorized_keys
+ssh ubuntu@54.236.8.220
+cat /home/athar/.ssh/id_rsa
