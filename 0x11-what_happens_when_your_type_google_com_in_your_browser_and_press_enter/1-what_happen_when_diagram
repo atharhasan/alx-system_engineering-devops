@@ -1,0 +1,32 @@
++-----------------+      +-----------------+      +-----------------+      +-----------------+
+| Your Browser    | ---- | DNS Resolver   | ---- | Firewall         | ---- | Load Balancer  |
++-----------------+      +-----------------+      +-----------------+      +-----------------+
+                   |          | (DNS Lookup)          |          | (Distributes Traffic)
+                   |          v                          v          |
+                   +-----------------+                    +-----------------+
+                   | Web Server      |                    | Application Server |
+                   +-----------------+                    +-----------------+
+                          |                                        |
+                          | (Serves Static Content)                v
+                          |                                        +-----------------+
+                          +-----------------+                    | Database         |
+                          | Application     |                    +-----------------+
+                          +-----------------+                    | (Content Source) |
+                                            |
+                                            v
+                   +-----------------+
+                   | Your Browser    | (Receives Webpage)
+                   +-----------------+
+
+Explanation:
+
+Your Browser: You enter the URL https://www.google.com in the address bar and press Enter.
+DNS Resolution: The browser doesn't understand domain names, so it sends a request to a DNS resolver to translate the domain name (www.google.com) into its corresponding IP address (e.g., 142.250.184.196).
+Firewall: The request goes through a firewall, a security system that filters incoming and outgoing traffic based on predefined rules.
+Load Balancer: The request reaches the load balancer, a device that distributes traffic across multiple web servers to ensure optimal performance and prevent overloading any single server.
+Web Server: The load balancer directs the request to a web server. The web server is responsible for serving static content like HTML, CSS, and JavaScript files that make up the basic structure of the webpage.
+Application Server: The web server might delegate generating dynamic content (like search results on Google) to an application server. The application server retrieves data from the database.
+Database: The application server interacts with the database to fetch the necessary information to generate the webpage.
+Response: The application server sends the generated webpage content back to the web server.
+Web Server: The web server receives the content and prepares a response to send back to your browser. 1 Encryption (HTTPS): It's important to note that in a secure connection (HTTPS), the communication between your browser and the web server is encrypted using protocols like TLS/SSL. This encryption protects your data from being intercepted by third parties.
+Your Browser: Your browser receives the response from the web server, interprets the HTML, CSS, and JavaScript code, and displays the webpage on your screen.
